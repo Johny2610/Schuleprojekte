@@ -25,13 +25,10 @@ public class Rechnungen1 {
     double ergebnis4 ;
     ergebnis1 = zahl1+zahl2 ;
     System.out.println("zahl1 + zahl2 = "+zahl1+" + "+zahl2+" = "+ergebnis1);
-    
     ergebnis2 = zahl1-zahl2 ;
-    System.out.println("zahl1 - zahl2 = "+zahl1+" - "+zahl2+" = "+ergebnis2);
-    
+    System.out.println("zahl1 - zahl2 = "+zahl1+" - "+zahl2+" = "+ergebnis2); 
     ergebnis3 = zahl1*zahl2 ;
     System.out.println("zahl1 * zahl2 = "+zahl1+" x "+zahl2+" = "+ergebnis3);
-    
     if (zahl2 == 0){
       System.out.println("ERROR Divisor = 0");
     } 
