@@ -1,8 +1,8 @@
 /**
   *
   * Beschreibung
-  *
-  * @version 1.0 vom 18.09.2015
+  * Calculator
+  * @version 1.1 vom 18.09.2015
   * @author 
   */
 
@@ -19,26 +19,41 @@ public class Rechnungen1 {
     zahl2 =Tastatur.leseKommazahl();
     System.out.println("zahl2 = "+zahl2);
     
+    System.out.println("Wählen Sie den gewünschten Operator: ");
+    System.out.println("1 = Addition");
+    System.out.println("2 = Subtraktion");
+    System.out.println("3 = Multiplikation");
+    System.out.println("4 = Division");
+    
+    int operator;
+    operator = Tastatur.leseZahl();
+    
     double ergebnis1 ;
     double ergebnis2 ;
     double ergebnis3 ;
     double ergebnis4 ;
-    ergebnis1 = zahl1+zahl2 ;
-    System.out.println("zahl1 + zahl2 = "+zahl1+" + "+zahl2+" = "+ergebnis1);
     
-    ergebnis2 = zahl1-zahl2 ;
-    System.out.println("zahl1 - zahl2 = "+zahl1+" - "+zahl2+" = "+ergebnis2);
-    
-    ergebnis3 = zahl1*zahl2 ;
-    System.out.println("zahl1 * zahl2 = "+zahl1+" x "+zahl2+" = "+ergebnis3);
-    
-    if (zahl2 == 0){
+    if (operator == 1) {
+      ergebnis1 = zahl1+zahl2 ;
+      System.out.println("zahl1 + zahl2 = "+zahl1+" + "+zahl2+" = "+ergebnis1);  
+    } else if (operator == 2) {
+      ergebnis2 = zahl1-zahl2 ;
+      System.out.println("zahl1 - zahl2 = "+zahl1+" - "+zahl2+" = "+ergebnis2);  
+    } else if (operator == 3) {
+      ergebnis3 = zahl1*zahl2 ;
+      System.out.println("zahl1 * zahl2 = "+zahl1+" x "+zahl2+" = "+ergebnis3);    
+    } else if (operator == 4) {
+      if (zahl2 == 0){
       System.out.println("ERROR Divisor = 0");
-    } 
-    else{
+      } 
+      else{
       ergebnis4 = zahl1/zahl2;
       System.out.println("zahl1 / zahl2 = "+zahl1+" : "+zahl2+" = "+ergebnis4);
-    }
+      }
+    } else {
+      System.out.println("Fehlerhafter Operator gewählt!"); 
+    } // end of if-else
+
   }  // end of main
   
 } // end of class Rechnungen1
